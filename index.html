@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="css/burger.css" />
   <link rel="stylesheet" href="css/cards.css" />
   <link rel="icon" type="image/png" href="img/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Waiting+for+the+Sunrise&display=swap"
+    rel="stylesheet">
   <title>Emergency Site</title>
 </head>
 
@@ -20,11 +24,12 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"><img src="img/tema4-logo-v2-outlinestroke.webp" alt="Logo"></a>
       </div>
       <ul class="menu">
-        <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-        <li><a class="menuItem" href="register.html">Indberet</a></li>
+        <button id="theme-btn" class="light_dark_mode">Lys/Mørk</button>
+        <li><a class="menuItem" href="instruction.html">Patientbehandling </a></li>
+        <li><a class="menuItem" href="register.html">Lægejournal</a></li>
       </ul>
       <button class="burger">
         <span class="line"></span>
@@ -35,56 +40,140 @@
   </header>
   <section id="main-disclamer">
     <div id="main-disclamer-content">
-      <img src="warning" alt="ICON" />
+      <img class="logo" src="img/tema4-logo-uden-tekst-v2-copy2copy.svg" alt="Logo uden tekst" />
       <div>
-        <h1>OVERSKRIFT1</h1>
-        <p class="sub">Underrubrik</p>
+        <h1>Børn oplever kropsforvrængninger!</h1>
+        <p class="sub">Har du, hvad der skal til for at kurerer dem?</p>
       </div>
     </div>
   </section>
   <main>
     <section id="daily">
       <article class="daily_card">
-        <img src="" alt="teaser_img" />
+        <img src="img/tema-4-infografik-hotspots-v2-strokeoutline copy.webp" alt="Infografik" />
         <div class="daily_text">
-          <h2>Teaser</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            magnam ducimus ea, sed minima asperiores.
+          <h2>Første patient:</h2>
+          <p class="first_patient">
+            Lisa er blevet bragt ind af sine forældre, fordi hun er blevet ramt af krops forvrængninger.
           </p>
-          <a href="" class="cta_btn">Se mere</a>
+          <a href="instruction.html" class="cta_btn">Tag Lisas sag</a>
         </div>
       </article>
       <article class="daily_card">
-        <img src="" alt="teaser_img" />
+        <img src="img/tema4-first-teaser-img-v2 copy-outlinestroke.webp" alt="Forms billede" />
         <div class="daily_text">
-          <h2>Teaser</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            magnam ducimus ea, sed minima asperiores.
+          <h2>Lægejournal:</h2>
+          <p class="journal">
+            Her kan du skrive informationer ind i din lægejournal.
           </p>
-          <a href="" class="cta_btn">Se mere</a>
+          <a href="register.html" class="cta_btn">Gå til journal</a>
         </div>
       </article>
     </section>
     <section id="breaking">
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>Udklip fra en nyhedsartikel:</h3>
+        <p>MONSTER INFASTION! Lokal læge med interesse for det okkulte er byens redning.</p>
+        <img src="img/tema4-andet-teaser-img-v1-outlinestroke.webp" alt="Billed til nyhedsudklip" />
+        <div popover id="popover1">
+          <h3>Udklip fra en nyhedsartikel:</h3>
+          <h2>MONSTER INFASTION! Lokal læge med interesse for det okkulte er byens redning.</h2>
+          <section>
+            <p>Børn overalt i byen er begyndt at blive inficeret af monstrøse væsner. Det er som om at disse forskellige
+              monstre
+              besætter vores børn, og er skyld i, at vores børn oplever rædselsfulde kropsforvrængninger!</p>
+            <img src="img/tema4-andet-teaser-img-v1-outlinestroke.webp" alt="Billed til nyhedsudklip">
+            <p>Små monstre!
+              Flere forældre og værger til små børn har over de seneste par måneder indberettet til sundhedsvæsnet, at
+              deres børn
+              lider under forfærdetlige symptomer, som resulterer i, at børnene udvikler groteske fysiske
+              kropsforvrængninger.
+              Disse fysiske forvrængninger bliver ofte efterfulgt af alvorlige psykiske problemer for børnene.
+
+              Nogle forældre og værger har informeret sundhedsvæsnet om, at deres børn på forhånd har været psykisk
+              skrøbelige. I
+              disse tilfælde har børnene måske allerede haft nogle psykiske diagnoser, inden inficeringen af monstrene.
+            </p>
+            <p>I størstedelen af tilfældene, hvor børn bliver inficerede af forskellige typer af monstre, mener forældre
+              og værger dog,
+              at deres børn ikke har været mentalt skrøbelige forinden inficeringen fandt sted.
+
+              Ny type speciallæge.
+              Kort efter de første tilfælde blev indberettet, trådte en lokal læge frem med sin viden om det okkulte.
+              Lægen har været
+              i stand til at identificere mange af de monstre, der inficerede byens børn, og har lige siden epidemien
+              arbejdet hårdt
+              på at finde ud af, hvordan de forskellige forvrængninger skal kureres.</p>
+          </section>
+          <button popovertarget="popover1" class="close_btn" id="close_btn">LUK</button>
+        </div>
+        <button popovertarget="popover1" class="cta_btn">Læs mere</button>
+
       </article>
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>Beskrivelse af spillet:</h3>
+        <p>Her kan du læse lidt om, hvad dette spil går ud på.</p>
+        <img src="img/tema4-spilbeskrivelse-img-v1-strokeoutline.webp" alt="Billede til spilbeskrivelse/logo" />
+        <div popover id="popover2">
+          <h3>Beskrivelse af spillet:</h3>
+          <h2>Spillets beskrivelse:</h2>
+          <ul>
+            <li>Emergency: I dette spil er du en læge som altid har haft en stor interesse og viden om det okkulte, så
+              da nogle af
+              børnene i din by begynder at blive inficeret af forskellige slags monstre, tager deres forældre/værger
+              børnene til lægen
+              (dig) for at finde ud af, hvad der er galt med børnene.</li>
+            <li>Når du klikker på de rødlige ‘hotspots’ får du en overordnet overskrift over det specifikke symptom + et
+              zoom-in af
+              ‘hotspot’ punktet, hvor du så kan se den reelle kropsforvrængning. Udover det får du også en kort
+              beskrivelse fra
+              forældrene/værgerne om, hvornår symptomet begyndte.</li>
+            <li>For hvert ‘hotspot’ får du også forslag til tre forskellige monstre, som kunne være årsagen til
+              symptomet. Når du har
+              været igennem alle tre ‘hotspots’ vil du se, at kun et monster går igen alle gangene, og så ved du hvilket
+              monster, der
+              er problemet (udelukkelsesmetoden).</li>
+          </ul>
+          <button popovertarget="popover2" class="close_btn" id="close_btn">LUK</button>
+        </div>
+        <button popovertarget="popover2" class="cta_btn">Læs mere</button>
       </article>
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>Spilindstillinger:</h3>
+        <p>Her kan du gå ind og justere spillets indstillinger.</p>
+        <img src="img/tema4-sidste-teaser-img-v1-strokeoutline copy.webp" alt="Billede til spilindstillinger" />
+        <div popover id="popover3">
+          <h3>Spilindstillinger:</h3>
+          <section>
+            <h3>Lydindstillinger:</h3>
+            <ul>
+              <li>Lydeffekter:</li>
+              <li>Musik:</li>
+              <li class="streamer">Streamer tilstand:</li>
+              <li class="streamer_music">Musik:</li>
+            </ul>
+            <h3>Grafikindstillinger:</h3>
+            <ul>
+              <li>Høj</li>
+              <li class="graf_med">Medium</li>
+              <li class="graf_low">Lav</li>
+            </ul>
+            <h3>Sværhedsgrad:</h3>
+            <ul>
+              <li>Let</li>
+              <li class="difi_med">Mellem</li>
+              <li class="difi_hard">Svær</li>
+            </ul>
+            <h3>Sprog:</h3>
+            <ul>
+              <li>Dansk</li>
+              <li class="lang_eng">English</li>
+              <li class="lang_deu">Deutch</li>
+            </ul>
+          </section>
+          <button popovertarget="popover3" class="close_btn" id="close_btn">LUK</button>
+        </div>
+        <button popovertarget="popover3" class="cta_btn">Læs mere</button>
       </article>
     </section>
   </main>
@@ -116,6 +205,7 @@
     </nav>
   </footer>
   <script src="js/burger.js"></script>
+  <script src="light-dark-mode.js"></script>
   <!-- <script src="js/main.js"></script> -->
 </body>
 

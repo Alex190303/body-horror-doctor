@@ -6,7 +6,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 
@@ -32,6 +32,11 @@ svg {
   width: 100%;
   height: auto;
 }
+.logo {
+  display: flex;
+  width: 150px;
+  height: auto;
+}
 
 label {
   display: block;
@@ -41,7 +46,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: "Cutive Mono", monospace;
   color: inherit;
   background-color: transparent;
   font-size: max(1em, 16px);

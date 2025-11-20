@@ -8,6 +8,24 @@ header {
   height: min-content;
 }
 
+p {
+  font-family: "Cutive Mono", monospace;
+}
+
+.first_patient {
+  display: inline-block;
+  background-color: var(--fp_j_bg_color);
+  border-radius: var(--border-radius);
+  padding: 0.4rem 1rem;
+}
+
+.journal {
+  display: inline-block;
+  background-color: var(--fp_j_bg_color);
+  border-radius: var(--border-radius);
+  padding: 0.4rem 1rem;
+}
+
 #main-disclamer {
   height: 225px;
   background-color: var(--color-head-bg);
@@ -30,7 +48,8 @@ main section {
 }
 
 h1 {
-  font-size: var(--font-h1-size);
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: 3rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-inverted);
   margin: 5px 0;
@@ -43,36 +62,40 @@ h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
   background-color: var(--color-head-bg);
-  font-size: var(--font-h2-size);
+  font-size: 2rem;
 }
 
 #instruction p {
   grid-column: 1/-1;
   margin-bottom: 20px;
-  font-size: var(--font-h2-size);
+  font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
 .sub {
-  font-size: var(--font-sub1-size);
+  font-size: 1.5rem;
   font-weight: var(--font-weight-light);
   color: var(--color-text-inverted);
 }
 
 h2 {
-  font-size: var(--headline2-size);
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.3rem;
+  text-decoration: underline;
 }
 
 h3 {
-  font-size: var(--headline3-size);
+  font-family: "Cutive Mono", monospace;
+  text-decoration: underline;
+  font-size: 1.2rem;
 }
 
-main>h1 {
+main > h1 {
   width: calc(80% - 6rem);
 }
 
 /* NAVIGATION STRUCTURES */
-header>nav {
+header > nav {
   height: 100%;
   background-color: var(--color-menu-bg);
 }
@@ -82,7 +105,30 @@ nav ul {
 }
 
 a {
-  font-family: var(--font-family-sans);
+  font-family: "Cutive Mono", monospace;
+}
+
+label {
+  font-family: "Cutive Mono", monospace;
+}
+
+li {
+  font-family: "Cutive Mono", monospace;
+}
+
+button {
+  font-family: "Cutive Mono", monospace;
+}
+
+.close_btn {
+  background-color: #d38574;
+  padding: 0.25rem;
+  margin-bottom: 10px;
+}
+
+.light_dark_mode {
+  background-color: #d38574;
+  padding: 0.25rem;
 }
 
 nav a {
@@ -99,11 +145,12 @@ nav a {
   height: 3.6rem;
 }
 
-#logotype-wrapper>a {
+#logotype-wrapper > a {
   color: var(--color-text-logotype);
   font-size: var(--font-logotype-size);
   font-weight: var(--font-weight-medium);
-  width: max-content;
+  width: 320px;
+  padding: 4rem;
   margin-left: 1rem;
 }
 
@@ -118,7 +165,7 @@ header nav li a {
 }
 
 /* Pilen efter menu-tekst */
-header>nav li>a:after {
+header > nav li > a:after {
   content: " \2192";
 }
 
@@ -134,4 +181,60 @@ nav a:active {
 /* FOOTER */
 footer a {
   font-size: 0.7rem;
+}
+
+/* Breaking news styling */
+[popover] {
+  padding: 1rem;
+  max-height: 90vh;
+  max-width: 50ch;
+  width: 90vw;
+  background-color: var(--news_bg_color);
+
+  button {
+    position: sticky;
+    top: 0;
+    justify-self: end;
+  }
+
+  &:popover-open {
+    display: grid;
+  }
+
+  &::backdrop {
+    background: #0008;
+  }
+
+  .streamer {
+    color: var(--game_settings);
+  }
+
+  .streamer_music {
+    color: var(--game_settings);
+    text-decoration: line-through;
+  }
+
+  .graf_med {
+    color: var(--game_settings);
+  }
+
+  .graf_low {
+    color: var(--game_settings);
+  }
+
+  .difi_med {
+    color: var(--game_settings);
+  }
+
+  .difi_hard {
+    color: var(--game_settings);
+  }
+
+  .lang_eng {
+    color: var(--game_settings);
+  }
+
+  .lang_deu {
+    color: var(--game_settings);
+  }
 }

@@ -52,10 +52,12 @@
   margin: 0 0 1rem 0;
 }
 .news_card:first-child:before {
-  content: "BREAKING NEWS";
+  content: "EXTRA:";
+  font-family: "Cutive Mono", monospace;
+  text-decoration: underline;
   background-color: var(--color-headline-bg);
   color: var(--color-headline-text-page);
-  font-size: var(--font-h3-size);
+  font-size: 1.3rem;
   font-weight: var(--font-weight-medium);
   text-align: center;
   line-height: 1rem;
