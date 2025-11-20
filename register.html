@@ -1,81 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="register">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
 
-    <main>
-      <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="icon" type="image/png" href="img/fav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Waiting+for+the+Sunrise&display=swap"
+    rel="stylesheet">
+  <title>Emergency Site</title>
+</head>
+
+<body id="register">
+  <header>
+    <nav>
+      <div id="logotype-wrapper" class="logo">
+        <a href="index.html"><img src="img/tema4-logo-v2-outlinestroke.webp" alt="Logo"></a>
+      </div>
+      <ul class="menu">
+        <button id="theme-btn" class="light_dark_mode">Lys/Mørk</button>
+        <li><a class="menuItem" href="instruction.html">Patientbehandling </a></li>
+        <li><a class="menuItem" href="register.html">Lægejournal</a></li>
+      </ul>
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Lægejournal:</h1>
+    <section id="form-section">
+      <form id="webform">
+        <fieldset class="fieldset">
+          <article id="form-info">
+            <h2>Patient information:</h2>
+          </article>
+
+          <label for="fornavn">Fornavn:</label>
+          <input id="fornavn" name="fornavn" type="text" required>
+          <label for="efternavn">Efternavn:</label>
+          <input id="efternavn" name="efternavn" type="text" required>
+          <label for="alder">Alder:</label>
+          <input id="alder" name="alder" type="number" required>
+        </fieldset>
+        <fieldset class="fieldset">
+          <h2>Dato for patientbehandling:</h2>
+          <label for="dato-behandling">Vælg dato:</label>
+          <input id="dato-behandling" name="date" type="date" required>
+        </fieldset>
+        <fieldset class="fieldset">
+          <h2>Tjekliste over patientens forvrængninger:</h2>
+          <div class="checkbox">
+            <input id="check-box-1" value="Øjeforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-1">Øjeforvrængning</label>
+          </div>
+          <div class="checkbox">
+            <input id="check-box-2" value="Kindforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-2">Kindforvrængning</label>
+          </div>
+          <div class="checkbox">
+            <input id="check-box-3" value="Håndforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-3">Håndforvrængning</label>
+          </div>
+          <div class="checkbox">
+            <input id="check-box-5" value="Øreforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-5">Øreforvrængning</label>
+          </div>
+          <div class="checkbox">
+            <input id="check-box-6" value="Skulderforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-6">Skulderforvrængning</label>
+          </div>
+          <div class="checkbox">
+            <input id="check-box-7" value="Maveforvrængning" name="checkbox" type="checkbox">
+            <label for="check-box-7">Maveforvrængning</label>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset">
+          <h2>Index over monstre:</h2>
+          <label for="monster-select">Monster index:</label>
+          <select name="monstre" id="monster-select">
+            <option value="">--Vælg det korrekte monster--</option>
+            <option value="Pahrina Dæmon">Pahrina Dæmon</option>
+            <option value="McZoom-Ding Gremlin">McZoom-Ding Gremlin</option>
+            <option value="Oleanders Vræler">Oleanders Vræler</option>
+            <option value="Tandtyven">Tandtyven</option>
+            <option value="Krystalvågteren">Krystalvågteren</option>
+            <option value="Largas' Smærte">Largas' Smærte</option>
+          </select>
+        </fieldset>
+        <button type="submit" class="button">Indsend</button>
+      </form>
+    </section>
+    <section id="form-summary">
+      <fieldset class="fieldset">
         <article>
-          <p class="placeholder">Opsummering</p>
+          <h2>Udskrivelse af information:</h2>
+          <p>Fornavn: <span id="first_name_output"></span></p>
+          <p>Efternavn: <span id="last_name_output"></span></p>
+          <p>Alder: <span id="age_output"></span></p>
+          <p>Dato: <span id="dato_behandling_output"></span></p>
+          <p>Forvrængninger: <span id="forvraengning_output"></span></p>
+          <p>Monster: <span id="monster_output"></span></p>
         </article>
-      </section>
-    </main>
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+      </fieldset>
+    </section>
+  </main>
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="light-dark-mode.js"></script>
+</body>
+
 </html>

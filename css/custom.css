@@ -1,20 +1,23 @@
 :root {
+  /* Color-scheme */
+  color-scheme: light;
+
   /* Colours */
-  --color-bg: #cfceca; /* page background /*
+  --color-bg: light-dark(#c7c8d6, #7f727d); /* page background /*
 
   /* Header */
-  --color-head-bg: #625e5c;
+  --color-head-bg: light-dark(#765e62, #4e4137);
 
   /* Logotype */
-  --color-logotype-bg: #2a2828;
-  --color-text-logotype: #c1bfb8;
+  --color-logotype-bg: #9c8981;
+  --color-text-logotype: #dfded8;
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: #5a5b5e;
+  --color-menu-bg: light-dark(#a0a080, #5e6253);
   /* Links */
-  --color-link-bg: #78766e;
-  --color-link-hover: #fff; /* used */
+  --color-link-bg: #d38574;
+  --color-link-hover: light-dark(#c7c8d6, #7f727d); /* used */
   --color-link-active: #99958f; /* used */
   --border-radius-links: 1px;
 
@@ -23,12 +26,12 @@
   --font-sub1-size: 1rem;
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
-  --color-headline-bg: #4b4545;
-  --color-headline-text-page: #42413d;
+  --color-headline-bg: light-dark(#765e62, #4e4137);
+  --color-headline-text-page: #dfded8;
 
   /* Tekst */
   --color-text: #000;
-  --color-text-inverted: #cdccc4;
+  --color-text-inverted: #dfded8;
 
   /*  Marginer */
   --margin-head-bottom: 5px;
@@ -37,13 +40,14 @@
   --border-radius: 5px;
 
   /* Cards */
-  --color-card-bg: #8a8585;
-  --color-cta-card-bg: #d5d2d0;
+  --color-card-bg: light-dark(#dddcdb, #574d55);
+  --color-cta-card-bg: #d38574;
+
   /* news-cards */
-  --color-news-bg: #dbdad4;
-  --color-news-bg-inverted: #585a5e;
-  --color-cta-newscard-bg: #787473;
-  --color-cta-newscard-bg-inverted: #7b7d83;
+  --color-news-bg: light-dark(#e8e1db, #995841);
+  --color-news-bg-inverted: light-dark(#9c8981, #bd8d6d);
+  --color-cta-newscard-bg: #d38574;
+  --color-cta-newscard-bg-inverted: #d38574;
 
   /* Fonts */
   --font-family-sans: ui-sans-serif;
@@ -63,7 +67,17 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #676161;
-  --color-infobox-1-bg: #cfcec6;
-  --color-infobox-2-bg: #969995;
+  --color-info-bg: light-dark(#f0e9f7, #473f50);
+  --color-infobox-1-bg: light-dark(#f6f6f6, #dcd1c4);
+  --color-infobox-2-bg: light-dark(#e4d3c0, #bd8d6d);
+
+  /* Colors from all other css files */
+  --web_bg_color: light-dark(#dddcdb, #574d55);
+  --form_sum_bg_color: light-dark(#e4d3c0, #bd8d6d);
+  --news_bg_color: light-dark(#e8e1db, #574d55);
+  --game_settings: light-dark(#676767, #a3a1a1);
+  --fp_j_bg_color: light-dark(#f6f6f6, #dcd1c4);
+}
+html.dark {
+  color-scheme: dark;
 }
